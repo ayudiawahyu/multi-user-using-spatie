@@ -1,0 +1,24 @@
+bagaimana cara menjalankan projek ini di lokal?
+
+pertama, download file zip projek ini
+kedua, buka projek pada kode editor (misalnya vscode)
+kemudian jalankan beberapa command ini pada terminal baru: 
+- composer instal
+- cp.env.example .env
+- php artisan key:generate
+
+apabila semua command diatas sudah berjalan dengan baik, silahkan buka file .env.
+cari baris kode (DB_DATABASE=laravel), biasanya terletak di baris ke 14 untuk mengganti
+nama database yang akan kita gunakan nantinya.
+
+jalankan command berikut ini satu-satu:
+- npm instal
+- npm run build
+- php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider"
+- php artisan migrate --seed
+- php artisan optimize
+
+setelah itu langsung saja nyalakan servernya dengan command ini: 
+- php artisan serve
+
+selamat mencoba, semoga membantu ^-^
